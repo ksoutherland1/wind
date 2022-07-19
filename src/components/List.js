@@ -3,7 +3,7 @@
 function List(props) {
     return (
         <div>
-            in list
+            <h2>How's the wind today?</h2>
         </div>
     );
 }
