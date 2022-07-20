@@ -14,28 +14,28 @@ function App() {
   const locations = [
     {
         name: 'Event Site',
-        latitiude: 45.714848,
-        longitude: -121.516733
+        lat: 45.714848,
+        lon: -121.516733
     },
     {
         name: 'Rufus',
-        latitiude: 45.6948,
-        longitude: -120.7359
+        lat: 45.6948,
+        lon: -120.7359
     },
     {
         name: 'Lyle',
-        latitiude: 45.6960,
-        longitude: -121.2862
+        lat: 45.6960,
+        lon: -121.2862
     },
     {
         name: 'Rowena',
-        latitiude: 45.6723,
-        longitude: -121.2684
+        lat: 45.6723,
+        lon: -121.2684
     },
     {
         name: 'Stevenson',
-        latitiude: 45.6957,
-        longitude: 121.8845
+        lat: 45.6957,
+        lon: 121.8845
     }
 ]
 
@@ -49,7 +49,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/List/*' element={<List currentData={currentData} setCurrentData={setCurrentData}/>} />
+          <Route path='/List/*' element={<List locations={locations} currentData={currentData} setCurrentData={setCurrentData}/>} />
           <Route path='/MoreInfo' element={<MoreInfo data={forecastData} setData={setForecastData}/>} />
           <Route path='/About' element={<About />} />  
         </Routes>

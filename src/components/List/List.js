@@ -5,10 +5,10 @@ import MoreInfo from './MoreInfo';
 
 const urlBase = 'https://flexweather.com/api/'
 
-function List({ currentData, setCurrentData }) {
+function List({ currentData, setCurrentData, locations}) {
 
         useEffect(() => {
-            const url = `${urlBase}now?lat=${locations[0].lat}&lon=${locationData[0].lon}&units=imperial`;
+            const url = `${urlBase}now?lat=${locations[0].lat}&lon=${locations[0].lon}&units=imperial`;
     
         const myHeaders = new Headers();
             myHeaders.append("Accept", "application/json");
@@ -31,7 +31,7 @@ function List({ currentData, setCurrentData }) {
     )
 
     
-    let list = locationData.map(item => {
+    let list = locations.map(item => {
         return (
             <div
                 className='locationName' 
