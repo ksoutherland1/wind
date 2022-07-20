@@ -1,4 +1,3 @@
-import { Link, Route, Routes } from "react-router-dom";
 
 
 function About(props) {
@@ -6,6 +5,7 @@ function About(props) {
         <div>
             <main>
                 <h2>About</h2>
+                <p>Created by an indecisive developer</p>
             </main>
         </div>
     );
