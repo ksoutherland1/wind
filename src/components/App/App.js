@@ -35,7 +35,7 @@ function App() {
     {
         name: 'Stevenson',
         lat: 45.6957,
-        lon: 121.8845
+        lon: -121.8845
     }
 ]
 

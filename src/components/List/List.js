@@ -8,7 +8,6 @@ const urlBase = 'https://flexweather.com/api/'
 function List({ currentData, setCurrentData, locations}) {
 
         useEffect(() => {
-            const url = `${urlBase}now?lat=${locations[0].lat}&lon=${locations[0].lon}&units=imperial`;
     
         const myHeaders = new Headers();
             myHeaders.append("Accept", "application/json");
@@ -18,18 +17,18 @@ function List({ currentData, setCurrentData, locations}) {
             headers: myHeaders,
             redirect: 'follow'
         };
-
+        for (let i = 0; i < locations.length; i++) {
+            const url = `${urlBase}now?lat=${locations[i].lat}&lon=${locations[i].lon}&units=imperial`;
         fetch(url, requestOptions)
             .then(response => response.json())
             .then((result) => {
-                console.log(result);
+                console.log(i,'sucess', result);
                 let newCurrentData = result.wind_speed;
                 setCurrentData(newCurrentData);
             })
             .catch(error => console.log('error', error));
         }
-    )
-
+        });
     
     let list = locations.map(item => {
         return (
@@ -37,9 +36,7 @@ function List({ currentData, setCurrentData, locations}) {
                 className='locationName' 
                 key={item.name}>
                 <h4>{item.name}</h4>
-                <p>Latitude: {item.lat}</p>
-                <p>Longitude: {item.lon}</p>
-                <p>Current Windspeed: </p>
+                <p>Current Windspeed: {currentData}</p>
                 <button>
                     <Link to='/MoreInfo'>{'See More'}</Link>
                     <Routes>
@@ -52,7 +49,6 @@ function List({ currentData, setCurrentData, locations}) {
     return(
         <>
             <h2>How's the wind today?</h2>
-            <p>Current Windspeed: {currentData}</p>
             {list}
         </>
     );
