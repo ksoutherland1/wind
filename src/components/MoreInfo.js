@@ -1,4 +1,4 @@
-import locationData from './locations.json';
+// import locationData from './locations.json';
 
 function MoreInfo({ data, setData }) {
     return (
