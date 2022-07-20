@@ -8,7 +8,7 @@ function List() {
     
     let list = locationData.map(item => {
         return (
-            <div 
+            <div
                 className='locationName' 
                 key={item.name}>
                 <p>{item.name}</p>
@@ -20,10 +20,6 @@ function List() {
     });
     return(
         <div>
-            <Link to='/'>HomePage</Link>
-            <Routes>
-                <Route path="../Homepage.js"></Route>   
-            </Routes>
             <h2>How's the wind today?</h2>
             {list}
         </div>
