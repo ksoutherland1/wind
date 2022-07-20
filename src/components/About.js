@@ -1,8 +1,18 @@
+import { Link, Route, Routes } from "react-router-dom";
+
 
 function About(props) {
     return (
         <div>
-            in About
+            <nav>
+                <Link to='/List/*'>HomePage</Link>
+            </nav>
+            <main>
+                <h2>About</h2>
+                <Routes>
+                    <Route path="./Homepage.js"></Route>
+                </Routes>
+            </main>
         </div>
     );
 }
