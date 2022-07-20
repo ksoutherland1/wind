@@ -1,6 +1,7 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import MoreInfo from './MoreInfo';
+import workspace from './workspace.postman_globals.json';
 
 
 const urlBase = 'https://flexweather.com/api/'
@@ -23,8 +24,7 @@ function List({ currentData, setCurrentData, locations}) {
             .then(response => response.json())
             .then((result) => {
                 console.log(i,'sucess', result);
-                let newCurrentData = result.wind_speed;
-                setCurrentData(newCurrentData);
+                let newData = locations[i]
             })
             .catch(error => console.log('error', error));
         }
