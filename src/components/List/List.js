@@ -8,7 +8,7 @@ const urlBase = 'https://flexweather.com/api/'
 function List({ currentData, setCurrentData }) {
 
     useEffect(() => {
-        const url = `${urlBase}now?lat=45.714848&lon=-121.516733&units=imperial`;
+        const url = `${urlBase}now?lat=${locationData[0].lat}&lon=${locationData[0].lon}&units=imperial`;
     
     const myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
@@ -23,9 +23,6 @@ function List({ currentData, setCurrentData }) {
         .then(response => response.json())
         .then((result) => {
             console.log(result)
-            let newCurrentData = result.wind_speed;
-            console.log(newCurrentData)
-            setCurrentData(newCurrentData);
         })
         .catch(error => console.log('error', error));
     })
@@ -36,6 +33,8 @@ function List({ currentData, setCurrentData }) {
                 className='locationName' 
                 key={item.name}>
                 <p>{item.name}</p>
+                <p>Latitude: {item.lat}</p>
+                <p>Longitude: {item.lon}</p>
                 <button>
                     <Link to={`/MoreInfo/${item.name}`}>{'See More'}</Link>
                 </button>               
@@ -46,6 +45,7 @@ function List({ currentData, setCurrentData }) {
         <>
             <h2>How's the wind today?</h2>
             <p>Current Windspeed: {currentData}</p>
+            <p>Test: {locationData[0].lat}</p>
             {list}
         </>
     );

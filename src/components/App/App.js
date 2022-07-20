@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Homepage from '../Homepage';
 import About from '../About';
 import List from '../List/List';
+// import MoreInfo from '../MoreInfo';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       <main>
         <Routes>
           <Route path='/*' element={<Homepage />} />
-          <Route path='/List/*' element={<List currentData={currentData} setCurrentData={setCurrentData}/>} />
+          <Route path='/List/' element={<List currentData={currentData} setCurrentData={setCurrentData}/>} />
+          {/* <Route path='/List/MoreInfo/*' element={<MoreInfo data={forecastData} setData={setForecastData}/>} /> */}
           <Route path='/About' element={<About />} />  
         </Routes>
       </main>
