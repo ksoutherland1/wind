@@ -11,6 +11,34 @@ function App() {
   const [currentData, setCurrentData] = useState(0);
   const [forecastData, setForecastData] = useState(0);
 
+  const locations = [
+    {
+        name: 'Event Site',
+        latitiude: 45.714848,
+        longitude: -121.516733
+    },
+    {
+        name: 'Rufus',
+        latitiude: 45.6948,
+        longitude: -120.7359
+    },
+    {
+        name: 'Lyle',
+        latitiude: 45.6960,
+        longitude: -121.2862
+    },
+    {
+        name: 'Rowena',
+        latitiude: 45.6723,
+        longitude: -121.2684
+    },
+    {
+        name: 'Stevenson',
+        latitiude: 45.6957,
+        longitude: 121.8845
+    }
+]
+
   return (
     <>
       <nav>

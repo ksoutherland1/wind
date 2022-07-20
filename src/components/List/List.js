@@ -1,15 +1,14 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import MoreInfo from './MoreInfo';
-import locationData from './locations.json';
+
 
 const urlBase = 'https://flexweather.com/api/'
 
 function List({ currentData, setCurrentData }) {
 
-    // let maybe = locationData.map(item => {
         useEffect(() => {
-            const url = `${urlBase}now?lat=${locationData[0].lat}&lon=${locationData[0].lon}&units=imperial`;
+            const url = `${urlBase}now?lat=${locations[0].lat}&lon=${locationData[0].lon}&units=imperial`;
     
         const myHeaders = new Headers();
             myHeaders.append("Accept", "application/json");
