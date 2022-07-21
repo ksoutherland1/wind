@@ -41,7 +41,7 @@ const [forecastData, setForecastData] = useState(0);
 
   return (
     <>
-      <nav>
+      <nav className='navbar'>
         <Link to='/'>HomePage</Link> 
         <Link to='/List'>Wind in the Gorge</Link>
         <Link to='/About'>About Us</Link>
