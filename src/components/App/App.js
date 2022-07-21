@@ -9,6 +9,7 @@ import MoreInfo from '../List/MoreInfo';
 
 function App() {
   const [currentData, setCurrentData] = useState(0);
+  
   const [forecastData, setForecastData] = useState(0);
 
   const locations = [

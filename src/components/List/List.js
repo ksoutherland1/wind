@@ -1,7 +1,6 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import MoreInfo from './MoreInfo';
-import workspace from './workspace.postman_globals.json';
 
 
 const urlBase = 'https://flexweather.com/api/'
@@ -23,8 +22,11 @@ function List({ currentData, setCurrentData, locations}) {
         fetch(url, requestOptions)
             .then(response => response.json())
             .then((result) => {
-                console.log(i,'sucess', result);
-                let newData = locations[i]
+                console.log(i, result);
+                let newData = result.wind_speed;
+                locations[i].push(newData);
+                console.log(newData);
+                console.log(locations);
             })
             .catch(error => console.log('error', error));
         }
@@ -36,7 +38,7 @@ function List({ currentData, setCurrentData, locations}) {
                 className='locationName' 
                 key={item.name}>
                 <h4>{item.name}</h4>
-                <p>Current Windspeed: {currentData}</p>
+                <p>Current Windspeed: {item.newData}</p>
                 <button>
                     <Link to='/MoreInfo'>{'See More'}</Link>
                     <Routes>
