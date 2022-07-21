@@ -2,13 +2,12 @@
 function Homepage(props) {
     
     return (
-        <>
-            <main>
-                <h1>Welcome!</h1>
+        <div className="homepage">
+            <main className="home">
+                <h1 id='welcome'>Check out the wind!</h1>
                 <p>Text regarding content of site/directions</p>
-                <p>MapBox implement</p>
             </main>
-        </>
+        </div>
     );
 }
 

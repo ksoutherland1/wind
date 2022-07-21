@@ -1,11 +1,10 @@
-import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import Homepage from '../Static pages/Homepage';
-import About from '../Static pages/About';
-import List from '../List/List';
-import MoreInfo from '../List/MoreInfo';
-import Data from '../../Data';
+import Homepage from './components/App/Homepage';
+import About from './components/App/About';
+import List from './components/App/AllWindList';
+import MoreInfo from './components/App/MoreInfo';
+import Data from './Data';
 
 
 function App() {

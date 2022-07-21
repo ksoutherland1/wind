@@ -5,7 +5,7 @@ import MoreInfo from './MoreInfo';
 
 const urlBase = 'https://flexweather.com/api/'
 
-function List({ currentData, setCurrentData, locations }) {
+function List({ locations }) {
 
     const fetchCurrentData = async () => {
 
