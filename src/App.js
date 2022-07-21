@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import Homepage from './components/App/Homepage';
 import About from './components/App/About';
@@ -41,11 +41,11 @@ const [forecastData, setForecastData] = useState(0);
 
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/'>HomePage</Link> 
-        <Link to='/List'>Wind in the Gorge</Link>
-        <Link to='/About'>About Us</Link>
-      </nav>
+        <div className='navbar'>
+          <Link to='/'>HomePage</Link> 
+          <Link to='/List'>Wind in the Gorge</Link>
+          <Link to='/About'>About Us</Link>
+        </div>
       <main>
         <Routes>
           <Route path='/' element={<Homepage />} />

@@ -37,7 +37,7 @@ function List({ locations }) {
 
     return (
         <div
-            className="List"
+            className="windlist"
         >
             <h2>How's the wind today?</h2>
             {
@@ -46,9 +46,9 @@ function List({ locations }) {
                         <div
                             className='locationName'
                             key={item.name}>
-                            <h4>{item.name}</h4>
-                            <p>Current Windspeed: {item.newData} </p>
-                            <button>
+                            <h4 className='windlist-itemname'>{item.name}</h4>
+                            <p className='windlist-currentwind'>Current Windspeed: {item.newData} </p>
+                            <button classname='windlist-moreinfo'>
                                 <Link to='/MoreInfo' className={`chose ${item.name}`}>{'See More'}</Link>
                                 <Routes>
                                     <Route path='/MoreInfo' element={<MoreInfo />} />

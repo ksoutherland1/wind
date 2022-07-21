@@ -26,12 +26,19 @@
     justify-self: center;
 }
 
-.about h2{
+.about h2, .windlist h2{
     grid-area: 1 / 2 / 2 / 3;
     font-size: 2rem;
     justify-self: center;
 }
 
+.windlist{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
 
 
 
