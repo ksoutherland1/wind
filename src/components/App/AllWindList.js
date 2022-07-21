@@ -45,6 +45,7 @@ function List({ locations }) {
                     return (
                         <div
                             className='locationName'
+                            id={item.name}
                             key={item.name}>
                             <h4 className='windlist-itemname'>{item.name}</h4>
                             <p className='windlist-currentwind'>Current Windspeed: {item.newData} </p>
