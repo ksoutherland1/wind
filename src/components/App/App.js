@@ -5,12 +5,10 @@ import Homepage from '../Static pages/Homepage';
 import About from '../Static pages/About';
 import List from '../List/List';
 import MoreInfo from '../List/MoreInfo';
+import Data from '../../Data';
 
 
 function App() {
-  const [currentData, setCurrentData] = useState(0);
-  
-  const [forecastData, setForecastData] = useState(0);
 
   const locations = [
     {
@@ -39,6 +37,8 @@ function App() {
         lon: -121.8845
     }
 ]
+const [currentData, setCurrentData] = useState(0); 
+const [forecastData, setForecastData] = useState(0);
 
   return (
     <>
@@ -52,7 +52,8 @@ function App() {
           <Route path='/' element={<Homepage />} />
           <Route path='/List/*' element={<List locations={locations} currentData={currentData} setCurrentData={setCurrentData}/>} />
           <Route path='/MoreInfo' element={<MoreInfo data={forecastData} setData={setForecastData}/>} />
-          <Route path='/About' element={<About />} />  
+          <Route path='/About' element={<About />} /> 
+          <Route path='/Data/*' element={<Data />} />
         </Routes>
       </main>
     </>
