@@ -5,27 +5,18 @@ import MoreInfo from './MoreInfo';
 
 const urlBase = 'https://flexweather.com/api/'
 
-function List({ locations }) {
-
+function AllWindList({ locations, currentData, setCurrentData }) {
     const fetchCurrentData = async () => {
-
-        const myHeaders = new Headers();
-        myHeaders.append("Accept", "application/json");
-
-        // const requestOptions = {
-        //     method: 'GET',
-        //     headers: myHeaders,
-        //     redirect: 'follow'
-        // };
+        
+            let newData = '';
         for (let i = 0; i < locations.length; i++) {
             const url = `${urlBase}now?lat=${locations[i].lat}&lon=${locations[i].lon}&units=imperial`;
             fetch(url)
                 .then(response => response.json())
                 .then((result) => {
-                    console.log(i, result);
-                    let newData = result.wind_speed;
-                    //setCurrentData(newData);
-                    console.log(newData);
+                    console.log(i, result, result.wind_speed);
+                    setCurrentData({ ...currentData, [locations[i].currentWind]: result.wind_speed });
+                    console.log(locations)
                 })
                 .catch(error => console.log('error', error));
         }
@@ -33,7 +24,7 @@ function List({ locations }) {
 
     useEffect(() => {
         fetchCurrentData();
-    }, []);
+    },[]);
 
     return (
         <div
@@ -48,8 +39,8 @@ function List({ locations }) {
                             id={item.name}
                             key={item.name}>
                             <h4 className='windlist-itemname'>{item.name}</h4>
-                            <p className='windlist-currentwind'>Current Windspeed: {item.newData} </p>
-                            <button classname='windlist-moreinfo'>
+                            <p className='windlist-currentwind'>Current Windspeed: {item.currentWind}mph </p>
+                            <button className='windlist-moreinfo'>
                                 <Link to='/MoreInfo' className={`chose ${item.name}`}>{'See More'}</Link>
                                 <Routes>
                                     <Route path='/MoreInfo' element={<MoreInfo />} />
@@ -62,4 +53,4 @@ function List({ locations }) {
         </div>
     );
 }
-export default List;
+export default AllWindList;
