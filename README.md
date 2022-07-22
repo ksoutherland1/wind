@@ -1,7 +1,8 @@
-# Getting Started with Create React App
+# Gorge Wind
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link to deployed site: https://creative-gelato-0c8677.netlify.app
 
+My project 
 ## Available Scripts
 
 In the project directory, you can run:

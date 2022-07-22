@@ -124,3 +124,34 @@
         grid-area: 2 / 2 / 4 / 3;
     }
 }
+@media screen and (min-width:481px){
+    .windlist {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-row-gap: 3px;
+        grid-column-gap: 3px;
+    }
+    .windlist h2{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    #Hoo{
+        grid-area: 2 / 1 / 3 / 3; 
+    }
+    #Row{
+        grid-area: 3 / 1 / 4 / 2;
+        justify-self: end;
+    }
+    #Ruf{
+        grid-area: 3 / 2 / 4 / 3; 
+        justify-self: start;
+    }
+    #Lyl{
+        grid-area: 4 / 1 / 5 / 2;
+        justify-self: end; 
+    }
+    #Ste{
+        grid-area: 4 / 2 / 5 / 3; 
+        justify-self: start;
+    }
+}
