@@ -42,7 +42,7 @@ function App() {
     }
   ];
 
-  const [currentData, setCurrentData] = useState(locations);
+
   const [forecastData, setForecastData] = useState(0);
 
   return (
@@ -55,7 +55,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/AllWindList/*' element={<AllWindList locations={locations} currentData={currentData} setCurrentData={setCurrentData} />} />
+          <Route path='/AllWindList/*' element={<AllWindList locations={locations} />} />
           <Route path='/MoreInfo' element={<MoreInfo data={forecastData} setData={setForecastData}/>} />
           <Route path='/About' element={<About />} />
         </Routes>
