@@ -15,7 +15,7 @@ function RenderData({ infoData }) {
                             key={item.location}>
                             <div className='locationchildren'>
                                 <h4 className='windlist-itemname'>{item.location}</h4>
-                                <h5 className='windlist-currentwind'>Current Windspeed: {`${item.wind_speed} ${item.wind_speed_units}`} </h5>
+                                <h5 className='windlist-currentwind'>Current Windspeed: {item.wind_speed}mph</h5>
                             </div>
                         </div>
                     );
