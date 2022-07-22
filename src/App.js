@@ -6,6 +6,7 @@ import AllWindList from './components/App/AllWindList';
 import MoreInfo from './components/App/MoreInfo';
 
 
+
 function App() {
 
   const locations = [
@@ -56,7 +57,7 @@ function App() {
           <Route path='/' element={<Homepage />} />
           <Route path='/AllWindList/*' element={<AllWindList locations={locations} currentData={currentData} setCurrentData={setCurrentData} />} />
           <Route path='/MoreInfo' element={<MoreInfo data={forecastData} setData={setForecastData}/>} />
-          <Route path='/About' element={<About />} /> 
+          <Route path='/About' element={<About />} />
         </Routes>
       </main>
     </>
