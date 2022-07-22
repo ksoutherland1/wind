@@ -12,9 +12,9 @@ function App() {
   return (
     <>
         <div className='navbar'>
-          <Link to='/'>HomePage</Link> 
-          <Link to='/AllWindList'>Wind in the Gorge</Link>
-          <Link to='/About'>About Us</Link>
+          <Link to='/'><button>Homepage</button></Link>
+          <Link to='/AllWindList'><button>Gorge Wind</button></Link>
+          <Link to='/About'><button>About Us</button></Link>
         </div>
       <main>
         <Routes>
