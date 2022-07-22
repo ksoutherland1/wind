@@ -38,3 +38,6 @@ Honestly more a continuation of my plans for this site, it's decently barebones 
 - Possible onclick functionality
 - Center on visitor if location data shared (geocoding expansion)
 - Recommendations for sports based on windspeeds of locations
+
+
+<img width="689" alt="Screen Shot 2022-07-22 at 1 11 33 PM" src="https://user-images.githubusercontent.com/106497171/180519822-8f7db905-6e7e-4da8-b234-2d7275daa661.png">
