@@ -10,6 +10,10 @@
     height: 100vh;
 }
 
+.home, .about{
+    background-color: #bec1e0;
+}
+
 #home-p, #about-p{
     justify-self: center;
     grid-area: 3 / 2 / 4 / 3;
@@ -23,34 +27,74 @@
 .home h1{
     grid-area: 2 / 2 / 3 / 3;  
     font-size: 3rem;
+    color: #3E5728;
+    background-color: #eee5e5;
     justify-self: center;
+    align-self: center;
+    padding: 1rem;
+    border: 4px solid #3E5728;
+    
 }
 
 .about h2, .windlist h2{
     grid-area: 1 / 2 / 2 / 3;
     font-size: 2rem;
     justify-self: center;
+    align-self: center;
+
+}
+.about h2{
+    color: #3E5728;
+    padding: 0.5rem;
+    background-color: #eee5e5;
+    border: 4px solid #3E5728;
+}
+.windlist h2{
+    color: #3E5728;
+    padding: 0.5rem;
+    background-color: #eee5e5;
+    border: 4px solid #3E5728;
 }
 
 .windlist{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    background-color: #eee5e5;
 }
 
-#Stevenson {
+.locationchildren{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: aliceblue;
+}
+
+#Hoo, #Row, #Ruf, #Lyl, #Ste{
+    justify-self: center;
+    align-self: center;
+    border: 4px dotted #3E5728;
+    padding: 0.5rem;
+}
+
+#Hoo{
     grid-area: 2 / 1 / 3 / 5; 
 }
-#Rowena{
+#Row{
     grid-area: 3 / 1 / 4 / 5;
 }
-#Rufus{
+#Ruf{
     grid-area: 4 / 1 / 5 / 5; 
 }
-#Lyle{
+#Lyl{
     grid-area: 5 / 1 / 6 / 5; 
+}
+#Ste{
+    grid-area: 6 / 1 / 7 / 5; 
 }
 
 

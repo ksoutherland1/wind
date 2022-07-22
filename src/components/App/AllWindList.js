@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import FetchData from './FetchData';
+import RenderData from './RenderData';
 
 
 
@@ -31,7 +31,7 @@ function AllWindList() {
 
     return (
         <>
-            <FetchData infoData={infoData} />
+            <RenderData infoData={infoData} />
         </>
     )
 

@@ -1,9 +1,9 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
 import Homepage from './components/App/Homepage';
 import About from './components/App/About';
 import AllWindList from './components/App/AllWindList';
-import MoreInfo from './components/App/MoreInfo';
+
 
 
 
@@ -20,7 +20,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/AllWindList/*' element={<AllWindList  />} />
-          <Route path='/MoreInfo' element={<MoreInfo />} />
           <Route path='/About' element={<About />} />
         </Routes>
       </main>

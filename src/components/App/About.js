@@ -15,25 +15,3 @@ function About(props) {
 }
 
 export default About;
-
-
-// const initialState = {
-//             latitude: 0,
-//             longitude: 0
-//         }
-//         const [latlongState, setlatlongState] = useState(initialState)
-//         
-//         const handleChange = (event) => {
-    
-//             setlatlongState({...latlongState, [event.target.id]: event.target.value})
-    
-//         }
-
-        // const myHeaders = new Headers();
-        // myHeaders.append("Accept", "application/json");
-
-        // const requestOptions = {
-        //     method: 'GET',
-        //     headers: myHeaders,
-        //     redirect: 'follow'
-        // };
