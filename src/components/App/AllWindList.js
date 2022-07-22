@@ -13,7 +13,8 @@ function AllWindList() {
 
     useEffect(() => {
         fetchCurrentData(); console.log('component did mount');
-    }, []);
+        // eslint-disable-next-line
+}, []);
 
     const fetchCurrentData = () => {
         const promises = urls.map(url => axios.get(url));
