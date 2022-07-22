@@ -2,7 +2,7 @@
 
 Link to deployed site: https://creative-gelato-0c8677.netlify.app
 
-This project is a simple app that provides wind-speed data for five Hood River
+This project is a simple app that provides wind-speed data for five Hood River locations. Wind-sports are incredibly popular in the area, and most locals depend upon relatively ancient apps. Having a Gorge-specific app appears to be both logical and helpful. 
 
 ## Technologies Used
 
