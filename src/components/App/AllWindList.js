@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import FetchData from './FetchData';
+import RenderData from './RenderData';
 
 
 
@@ -13,7 +13,8 @@ function AllWindList() {
 
     useEffect(() => {
         fetchCurrentData(); console.log('component did mount');
-    }, []);
+        // eslint-disable-next-line
+}, []);
 
     const fetchCurrentData = () => {
         const promises = urls.map(url => axios.get(url));
@@ -31,7 +32,7 @@ function AllWindList() {
 
     return (
         <>
-            <FetchData infoData={infoData} />
+            <RenderData infoData={infoData} />
         </>
     )
 
