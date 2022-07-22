@@ -1,5 +1,4 @@
-// import {Link, Route, Routes } from 'react-router-dom';
-// import MoreInfo from './MoreInfo';
+
 
 function RenderData({ infoData }) {
     return (
@@ -16,13 +15,7 @@ function RenderData({ infoData }) {
                             key={item.location}>
                             <div className='locationchildren'>
                                 <h4 className='windlist-itemname'>{item.location}</h4>
-                                <h5 className='windlist-currentwind'>Current Windspeed: {item.wind_speed}mph </h5>
-                                <button className='windlist-moreinfo'>See More
-                                    {/* <Link to='/MoreInfo' className={`chose ${item.name}`}>{'See More'}</Link>
-                                        <Routes>
-                                            <Route path='/MoreInfo' element={<MoreInfo id={item.location}/>} />
-                                        </Routes> */}
-                                </button>
+                                <h5 className='windlist-currentwind'>Current Windspeed: {`${item.wind_speed} ${item.wind_speed_units}`} </h5>
                             </div>
                         </div>
                     );
