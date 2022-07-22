@@ -12,7 +12,7 @@ function AllWindList() {
     const urls = ["https://flexweather.com/api/now?lat=45.714848&lon=-121.516733&units=imperial", "https://flexweather.com/api/now?lat=45.6948&lon=-120.7359&units=imperial", "https://flexweather.com/api/now?lat=45.6960&lon=-121.2862&units=imperial", "https://flexweather.com/api/now?lat=45.6723&lon=-121.2684&units=imperial", "https://flexweather.com/api/now?lat=45.6957&lon=-121.8845&units=imperial"];
 
     useEffect(() => {
-        fetchCurrentData(); console.log('component did mount');
+        fetchCurrentData();
         // eslint-disable-next-line
 }, []);
 
@@ -23,7 +23,6 @@ function AllWindList() {
             let data = [];
             responses.forEach(response => {
                 data = data.concat(response.data);
-                console.log(data)
             });
             setInfoData(data)
         }

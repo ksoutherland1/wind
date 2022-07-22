@@ -7,6 +7,7 @@ function Homepage(props) {
                 <h1 id='welcome'>Hood River Wind</h1>
                 <div id='home-p'>
                     <p>Text regarding content of site/directions</p>
+                    <p>Mapbox implementation here</p>
                 </div>
             </main>
         </div>

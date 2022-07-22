@@ -5,7 +5,7 @@ function RenderData({ infoData }) {
         <div
             className="windlist"
         >
-            <h2>How's the wind today?</h2>
+            <h2>Wind in the Gorge</h2>
             {
                 infoData.map(item => {
                     return (
